@@ -6,7 +6,6 @@ html {
 body{
   margin:0;
   background: #71b7cd;
-  
 }
 .container{
   height: 100vh;
@@ -18,46 +17,40 @@ body{
   background: url('./robot.gif');
   background-size: contain;
   background-position: left center;
+  flex: 1;
   background-repeat: no-repeat;
-
 }
 button{
   cursor: pointer;
   outline: none;
-  width:200px;
-  height: 50px;
+  width: 50%;
+  max-width: 200px; /* Limiting button width for smaller screens */
+  height: 10%;
+  max-height: 50px; /* Limiting button height for smaller screens */
   font-family: 'Courier New', monospace;
-  font-size: 20px;
+  font-size: 1.5vw; /* Responsive font size */
   color: white;
   background: #ff3483;
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
-
-
+  transition: box-shadow 0.3s ease;
 }
 button:hover{
   filter: brightness(95%);
-
+  box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
 }
 button:active{
   transform: scale(0.98);
-
 }
 button:disabled{
   cursor: default;
   filter: brightness(30%);
 }
 /* Media Query */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .container{
     background-size: cover;
     background-position: cover;
-
-  }
-  button{
-    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
-
   }
 }
-
